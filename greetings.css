@@ -1,8 +1,6 @@
 body{
     box-sizing: border-box;
-    /* background-image: url(images/greet\ background.png);
-    opacity: 0.5;
-    z-index: -1; */
+    background-image: url(images/greet\ background.png);
 }
 
 body .style{
@@ -84,7 +82,7 @@ body .style{
 
 .radio-buttons{
     /* display: grid; */
-    padding-top: 3%;
+    /* padding-top: 3%; */
     margin-left: 20%;
 }
 

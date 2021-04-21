@@ -23,7 +23,7 @@ function greetName(){
     }
 
     function greet(radioCheck){
-        
+        // if(!radioCheck){
             if (namesGreeted[userName] === undefined){
                 if(radioCheck == "latin"){
                     greetMessage = la + userName
@@ -43,26 +43,23 @@ function greetName(){
             
             }
             
+
+        // }
+        // else {errormessageLan = "Oops you have not selected a language"}
+            
+            
         
         nameInput.value = ""
 
     }
     console.log(greetMessage)
 
-    function errorMessRadio(radioCheck){
-        if(!radioCheck){
-            return errormessageLan;
-        }
-        // if(userName == ""){
-        //     return errorMessageName;
-        // }
-
+    function errorMessRadio(){
+        return errormessageLan
     } 
 
-    function errorMessName(userName){
-        if(userName == ""){
-            return errorMessageName;
-        }
+    function errorMessName(){
+        return errorMessageName
     }
     
     
