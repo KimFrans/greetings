@@ -15,6 +15,15 @@ checkedRadio1.checked = false
 
 var factory = greetName()
 
+
+factory.greetLo(Number(localStorage['counterForGreet']))
+if (localStorage['namesGreetedObject']){
+    factory.nameObs(JSON.parse(localStorage['namesGreetedObject']))
+}
+
+counterDis.innerHTML = Object.keys(factory.values().nameObject).length
+
+
 function greetings(){
 
     var checkedRadio = document.querySelector("input[name='language']:checked");
@@ -52,27 +61,32 @@ function greetings(){
         setTimeout(function(){ error.innerHTML = "" }, 2000);
     }   
     counterDis.innerHTML = factory.values().greets;
+    counterDis.innerHTML = Object.keys(factory.values().nameObject).length
     console.log(factory.values().greets);
     console.log(factory.values().theUser)
     //error.innerHTML = factory.values().sameName
     nameInput.value = ""
     //console.log()
-    factory.setLocalStorage()
+    //factory.setLocalStorage()
+    localStorage.setItem('namesGreetedObject', JSON.stringify(factory.values().nameObject))
+    localStorage['counterForGreet'] = factory.values().greets
 
 }
-factory.retriveLocalStorage()
+//factory.retriveLocalStorage()
+
+
 // if(counterDis.innerHTML == undefined){
 //     counterDis.innerHTML = factory.setLocalStorage()
 // }
-if(factory.retriveLocalStorage() == undefined || factory.setLocalStorage() == undefined){
-    counterDis.innerHTML = 0
-}
-else{
-    counterDis.innerHTML = factory.retriveLocalStorage()
+// if(factory.values().nameObject == undefined || factory.values().nameObject == undefined){
+//     counterDis.innerHTML = 0
+// }
+// else{
+    // counterDis.innerHTML = factory.values().nameObject
     //console.log(factory.retriveLocalStorage())
-    counterDis.innerHTML = factory.setLocalStorage()
+    // counterDis.innerHTML = Object.keys(factory.values().nameObject).length
     //console.log("second" + factory.setLocalStorage())
-}
+// }
 
 greetButton.addEventListener("click",greetings )
 

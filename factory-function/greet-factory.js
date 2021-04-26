@@ -100,6 +100,14 @@ function greetName(){
         return namesGreeted
     }
 
+    function nameObs(name){
+        namesGreeted = name
+    }
+
+    function greetLo(name){
+        greetCount = greetCount
+    }
+
     function values(){
         return{
             nameObject : namesGreeted,
@@ -119,21 +127,19 @@ function greetName(){
         localStorage.clear()
     }
 
-    function setLocalStorage(){
-        localStorage['namesGreetedObject'] = JSON.stringify(namesGreeted)
-        localStorage['counterForGreet'] = greetCount
-        // localStorage.setItem(namesGreeted , JSON.stringify(namesGreeted))
-        // localStorage.setItem(greetCount , JSON.stringify(greetCount))
-    }
+    // function setLocalStorage(){
+    //     localStorage['namesGreetedObject'] = JSON.stringify(namesGreeted)
+    //     localStorage['counterForGreet'] = greetCount
+    // }
 
-    function retriveLocalStorage(){
-        greetCount = Number(localStorage['counterForGreet'])
-        namesGreeted = JSON.parse(localStorage['namesGreetedObject'])
-        //namesGreeted = JSON.parse((localStorage['namesGreetedObject']));
-        //console.log(retrieve , JSON.parse(retrieve))
-    }
+    // function retriveLocalStorage(){
+    //     greetCount = Number(localStorage['counterForGreet'])
+    //     namesGreeted = JSON.parse(localStorage['namesGreetedObject'])
+    // }
 
     return{
+        greetLo,
+        nameObs,
         greet,
         errorMessRadio,
         values,
@@ -142,8 +148,8 @@ function greetName(){
         clearTheCountButton,
         nameOb,
         greetedNames,
-        setLocalStorage,
-        retriveLocalStorage,
+        // setLocalStorage,
+        // retriveLocalStorage,
     }
 
     

@@ -1,9 +1,11 @@
+var listOfNames = document.querySelector(".names")
 var factoryOb = greetName();
 
-var emptyOb = factoryOb.retriveLocalStorage()
+var emptyOb = {}
+if(localStorage['namesGreetedObject']){
+    emptyOb = JSON.parse(localStorage['namesGreetedObject'])
+}
+console.log(emptyOb)
 
-
-factoryOb.retriveLocalStorage()
-factoryOb.setLocalStorage()
-
-console.log(factoryOb.values().nameObject)
+listOfNames.innerHTML = JSON.stringify(emptyOb)
+console.log(emptyOb)
