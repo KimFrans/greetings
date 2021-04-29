@@ -118,6 +118,7 @@ body .style{
 
 .names-button .names{
     margin-left: 45%;
+    margin-top: 3%;
     float: left;
     background-color: rgb(8, 8, 8);
     border: rgb(35, 125, 243);
@@ -128,4 +129,19 @@ body .style{
 .names-button .names:hover{
     background-color: rgb(19, 133, 209);
   color:black;
+}
+
+.TDD-button .tdd{
+    margin-left: 50%;
+    margin-top: 3%;
+    float: left;
+    background-color: rgb(8, 8, 8);
+    border: rgb(243, 35, 35);
+    color:white;
+    font-size: 25px;
+}
+
+.TDD-button .tdd:hover{
+    background-color: rgb(243, 35, 35);
+    color:black;
 }
