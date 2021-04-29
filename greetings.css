@@ -56,14 +56,13 @@ body .style{
     padding: 10px 15px;
 }
 
-.counter{
+/* .counter{
     text-align: right;
     margin-right: 25%;
     font-size: 25px;
     padding-top: 3%;
     font-weight: bold;
-    /* font-style: initial; */
-}
+} */
 
 .buttons .greet-button .greet{
     margin-left: 27%;

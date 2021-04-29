@@ -24,7 +24,7 @@ function greetName(){
 
     function getUserName(names){
         var newName = names.trim();
-        userName = newName
+        userName = newName.charAt(0).toUpperCase() + newName.slice(1);
     }
 
     function greet(radioCheck){

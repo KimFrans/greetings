@@ -41,24 +41,27 @@ function greetings(){
         
         error.innerHTML = factory.values().sameName
        // error.innerHTML = factory.errorMessName()
-        setTimeout(function(){ messageDisplay.innerHTML = "" }, 2000);
-        setTimeout(function(){ error.innerHTML = "" }, 2000);
+        setTimeout(function(){ messageDisplay.innerHTML = "" }, 4000);
+        setTimeout(function(){ error.innerHTML = "" }, 4000);
 
     }
     
     
     else {
-        if(!checkedRadio){
+        if(!checkedRadio && nameInput.value == ''){
+            error.innerHTML = "Please enter name and select language"
+        }
+        else if(!checkedRadio){
             error.innerHTML = factory.errorMessRadio()
         }
-        if(nameInput.value == ""){
+        else if(nameInput.value == ""){
             error.innerHTML = factory.errorMessName()
         }
         //setTimeout(function(){ error.innerHTML = "" }, 2000);
-        if(!nameInput.value.match("^[a-zA-Z]*$")){
+        else if(!nameInput.value.match("^[a-zA-Z]*$")){
             error.innerHTML = factory.values().sameName
         }
-        setTimeout(function(){ error.innerHTML = "" }, 2000);
+        setTimeout(function(){ error.innerHTML = "" }, 4000);
     }   
     counterDis.innerHTML = factory.values().greets;
     counterDis.innerHTML = Object.keys(factory.values().nameObject).length
