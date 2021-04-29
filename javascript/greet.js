@@ -49,7 +49,7 @@ function greetings(){
     
     else {
         if(!checkedRadio && nameInput.value == ''){
-            error.innerHTML = "Please enter name and select language"
+            error.innerHTML = factory.noValues()
         }
         else if(!checkedRadio){
             error.innerHTML = factory.errorMessRadio()

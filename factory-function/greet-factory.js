@@ -4,6 +4,7 @@ function greetName(){
     var errorMessageName = "Oops, you have not enetered a name"
     var errormessageLan = "Oops you have not selected a language"
     var errorMessageSameName = ""
+    var errorNoValues = "Please enter name and select language"
     var la = "Salve, "
     var tur = "Merhaba, "
     var ital = "Ciao, "
@@ -108,6 +109,10 @@ function greetName(){
         greetCount = greetCount
     }
 
+    function noValues(){
+        return errorNoValues 
+    }
+
     function values(){
         return{
             nameObject : namesGreeted,
@@ -148,6 +153,7 @@ function greetName(){
         clearTheCountButton,
         nameOb,
         greetedNames,
+        noValues,
         // setLocalStorage,
         // retriveLocalStorage,
     }
